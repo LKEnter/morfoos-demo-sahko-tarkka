@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import "@morfoos/morfoos-os/styles/admin.css";
+
+/* Scan Morfoos packages so admin/core utility classes are generated */
+@source "../node_modules/@morfoos/morfoos-os/dist/**/*.{js,cjs}";
+@source "../node_modules/@morfoos/core/dist/**/*.{js,cjs}";
+
+@theme {
+  --color-brand-50: #eeeffa;
+  --color-brand-500: #4a509d;
+  --color-brand-700: #363b75;
+  --color-primary: #4a509d;
+  --color-primary-light: #8b90d6;
+  --color-secondary: #f3f4f6;
+  --color-accent: #4a509d;
+  --color-foreground: #111111;
+  --color-muted: #6b7280;
+  --color-on-primary: #ffffff;
+  --color-background: #fafafa;
+  --font-sans: var(--font-satoshi), "Satoshi", "Segoe UI", sans-serif;
+  --font-heading: var(--font-satoshi), "Satoshi", "Segoe UI", sans-serif;
+}
+
+:root {
+  --background: #fafafa;
+  --foreground: #111111;
+  --secondary: #f3f4f6;
+  --accent: #4a509d;
+  --muted: #6b7280;
+  --on-primary: #ffffff;
+  --admin-primary: #4a509d;
+  --admin-nav-active: #4a509d;
+}
+
+html,
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: inherit;
+}
+
+@layer base {
+  button:not(:disabled),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@layer utilities {
+  .hero-clip-left {
+    clip-path: polygon(0 0, 88% 0, 100% 100%, 0 100%);
+  }
+
+  .hero-clip-right {
+    clip-path: polygon(14% 0, 100% 0, 100% 100%, 4% 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
