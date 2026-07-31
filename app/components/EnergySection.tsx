@@ -15,10 +15,11 @@ export default function EnergySection() {
         <div className="grid grid-cols-1 overflow-hidden rounded-2xl lg:grid-cols-2">
           <div className="relative min-h-[18rem] bg-[var(--color-secondary)] lg:min-h-full">
             <Image
-              src="/assets/images/services/energiaohjaus-device.jpg"
+              src="/assets/images/services/energiaohjaus-device.webp"
               alt="Älykäs ohjausyksikkö optimoi sähkönkulutusta"
               fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              sizes="(max-width: 1023px) 100vw, 50vw"
+              quality={70}
               className="object-cover"
             />
             <div className="absolute inset-0 flex items-center justify-center">

@@ -14,7 +14,8 @@
   --color-secondary: #f3f4f6;
   --color-accent: #4a509d;
   --color-foreground: #111111;
-  --color-muted: #6b7280;
+  /* Slightly deeper muted for AA contrast on white / secondary backgrounds */
+  --color-muted: #4b5563;
   --color-on-primary: #ffffff;
   --color-background: #fafafa;
   --font-sans: var(--font-satoshi), "Satoshi", "Segoe UI", sans-serif;
@@ -26,7 +27,7 @@
   --foreground: #111111;
   --secondary: #f3f4f6;
   --accent: #4a509d;
-  --muted: #6b7280;
+  --muted: #4b5563;
   --on-primary: #ffffff;
   --admin-primary: #4a509d;
   --admin-nav-active: #4a509d;

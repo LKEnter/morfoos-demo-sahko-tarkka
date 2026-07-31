@@ -6,37 +6,37 @@ const SERVICES = [
     icon: Zap,
     title: "Sähköurakointi",
     description: "Avaimet käteen -periaatteella toteutetut uudis- ja saneerauskohteet.",
-    image: "/assets/images/services/sahkourakointi.jpg",
+    image: "/assets/images/services/sahkourakointi.webp",
   },
   {
     icon: Wrench,
     title: "Huollot ja vikakorjaukset",
     description: "Ennakoiva huolto ja nopeat vikakorjaukset kotitalouksille ja yrityksille.",
-    image: "/assets/images/services/huollot.jpg",
+    image: "/assets/images/services/huollot.webp",
   },
   {
     icon: Factory,
     title: "Teollisuuden sähkötyöt",
     description: "Tuotantolinjojen, jakokeskusten ja teollisuusautomaation sähköasennukset.",
-    image: "/assets/images/services/teollisuus.jpg",
+    image: "/assets/images/services/teollisuus.webp",
   },
   {
     icon: Building,
     title: "Taloyhtiöt",
     description: "Linjasaneeraukset, yleisten tilojen sähkötyöt ja ylläpitosopimukset.",
-    image: "/assets/images/services/taloyhtiot.jpg",
+    image: "/assets/images/services/taloyhtiot.webp",
   },
   {
     icon: PenTool,
     title: "Suunnittelu",
     description: "Sähkösuunnittelu ja dokumentointi kohteisiin, joissa vaaditaan jäljitettävyyttä.",
-    image: "/assets/images/services/suunnittelu.jpg",
+    image: "/assets/images/services/suunnittelu.webp",
   },
   {
     icon: Gauge,
     title: "Energiaratkaisut & ohjaus",
     description: "Energiaoptimointi ja älykäs kulutuksen ohjaus kodeissa ja kiinteistöissä.",
-    image: "/assets/images/services/energiaohjaus.jpg",
+    image: "/assets/images/services/energiaohjaus.webp",
   },
 ];
 
@@ -67,7 +67,9 @@ export default function Services() {
                   src={image}
                   alt={title}
                   fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  loading="lazy"
+                  quality={70}
+                  sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 380px"
                   className="object-cover"
                 />
                 <span className="absolute top-2 right-0 flex h-11 w-11 items-center justify-center rounded-full rounded-tr-none rounded-br-none bg-[var(--color-primary)] shadow-[0_6px_16px_rgba(74,80,157,0.4)]">

@@ -14,7 +14,7 @@ const REFERENCE_PROJECTS = [
     tag: "Yritys" as const,
     title: "Liikekiinteistön sähköremontti",
     location: "Pääkaupunkiseutu",
-    image: "/assets/images/references/liikekiinteisto.jpg",
+    image: "/assets/images/references/liikekiinteisto.webp",
     summary:
       "Toimitilan koko sähköjärjestelmän uusiminen käytön aikana, ilman häiriötä vuokralaisten arkeen.",
     items: [
@@ -28,7 +28,7 @@ const REFERENCE_PROJECTS = [
     tag: "Teollisuus" as const,
     title: "Tehtaan sähköasennus",
     location: "Etelä-Suomi",
-    image: "/assets/images/references/tehdas.jpg",
+    image: "/assets/images/references/tehdas.webp",
     summary:
       "Tuotantolinjan sähköistys ja automaatioliitännät toteutettuna tuotantokatkoja minimoiden.",
     items: [
@@ -42,7 +42,7 @@ const REFERENCE_PROJECTS = [
     tag: "Taloyhtiö" as const,
     title: "Kerrostalon linjasaneeraus",
     location: "Pääkaupunkiseutu",
-    image: "/assets/images/references/kerrostalo.jpg",
+    image: "/assets/images/references/kerrostalo.webp",
     summary:
       "Koko kiinteistön sähkölinjojen ja yleisten tilojen valaistuksen uusiminen asukkaita kuunnellen.",
     items: [
@@ -56,7 +56,7 @@ const REFERENCE_PROJECTS = [
     tag: "Yritys" as const,
     title: "Toimiston sähköjärjestelmät",
     location: "Etelä-Suomi",
-    image: "/assets/images/references/toimisto.jpg",
+    image: "/assets/images/references/toimisto.webp",
     summary:
       "Avotoimiston sähkösuunnittelu ja asennus, dokumentoituna käyttöönottoon asti.",
     items: [
@@ -101,7 +101,8 @@ export default function References() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    sizes="(min-width: 768px) 65vw, 100vw"
+                    sizes="(max-width: 767px) 100vw, 65vw"
+                    quality={70}
                     className="object-cover"
                   />
                   <span className="absolute left-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-xs font-semibold text-[var(--color-foreground)] shadow-sm">

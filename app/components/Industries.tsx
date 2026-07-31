@@ -6,37 +6,37 @@ const INDUSTRIES = [
     icon: Home,
     title: "Kodit",
     description: "Uudis- ja saneerauskohteet.",
-    image: "/assets/images/industries/kodit.jpg",
+    image: "/assets/images/industries/kodit.webp",
   },
   {
     icon: Building,
     title: "Taloyhtiöt",
     description: "Huollot ja sähköurakat.",
-    image: "/assets/images/industries/taloyhtiot.jpg",
+    image: "/assets/images/industries/taloyhtiot.webp",
   },
   {
     icon: Factory,
     title: "Teollisuus",
     description: "Asennukset ja kunnossapito.",
-    image: "/assets/images/industries/teollisuus.jpg",
+    image: "/assets/images/industries/teollisuus.webp",
   },
   {
     icon: Store,
     title: "Liiketilat",
     description: "Toimitilojen sähkötyöt.",
-    image: "/assets/images/industries/liiketilat.jpg",
+    image: "/assets/images/industries/liiketilat.webp",
   },
   {
     icon: Wheat,
     title: "Maatilat",
     description: "Tuotanto- ja talousrakennukset.",
-    image: "/assets/images/industries/maatilat.jpg",
+    image: "/assets/images/industries/maatilat.webp",
   },
   {
     icon: Landmark,
     title: "Julkinen sektori",
     description: "Kunnat ja julkiset kiinteistöt.",
-    image: "/assets/images/industries/julkinen-sektori.jpg",
+    image: "/assets/images/industries/julkinen-sektori.webp",
   },
 ];
 
@@ -61,7 +61,8 @@ export default function Industries() {
                   src={image}
                   alt={title}
                   fill
-                  sizes="(min-width: 1024px) 33vw, 50vw"
+                  sizes="(max-width: 639px) 50vw, (max-width: 1023px) 33vw, 380px"
+                  quality={70}
                   className="object-cover"
                 />
                 <span className="absolute top-2 right-0 flex h-11 w-11 items-center justify-center rounded-full rounded-tr-none rounded-br-none bg-[var(--color-primary)] shadow-[0_6px_16px_rgba(74,80,157,0.4)]">

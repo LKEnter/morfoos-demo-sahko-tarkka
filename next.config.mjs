@@ -12,9 +12,12 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    deviceSizes: [384, 640, 750, 828, 1080, 1200],
+    imageSizes: [128, 256, 384],
+    formats: ["image/avif", "image/webp"],
   },
   experimental: {
-    optimizePackageImports: ["@morfoos/core"],
+    optimizePackageImports: ["@morfoos/core", "lucide-react"],
   },
 };
 

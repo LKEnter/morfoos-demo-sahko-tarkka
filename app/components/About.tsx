@@ -36,10 +36,11 @@ export default function About() {
         <div className="relative mt-12">
           <div className="relative aspect-[16/8] overflow-hidden rounded-2xl bg-[var(--color-foreground)] sm:aspect-[16/7]">
             <Image
-              src="/assets/images/about/about-team.jpg"
+              src="/assets/images/about/about-team.webp"
               alt="Sähköasentaja tarkistaa suunnitelmia kohteessa"
               fill
-              sizes="(min-width: 1024px) 1200px, 100vw"
+              sizes="(max-width: 1023px) 100vw, 1200px"
+              quality={70}
               className="object-cover"
               loading="lazy"
             />

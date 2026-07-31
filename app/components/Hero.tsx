@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { CONTACT } from "../lib/contact";
 
 const STAT_CARDS = [
@@ -71,11 +71,13 @@ export default function Hero() {
 
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl sm:aspect-[5/6]">
             <Image
-              src="/assets/images/hero/hero-electrician.jpg"
+              src="/assets/images/hero/hero-electrician.webp"
               alt="Sähköasentaja työskentelee jakokeskuksen parissa"
               fill
               priority
-              sizes="(min-width: 1024px) 45vw, 100vw"
+              fetchPriority="high"
+              quality={70}
+              sizes="(max-width: 1023px) 90vw, 40vw"
               className="object-cover"
             />
           </div>
