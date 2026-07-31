@@ -20,8 +20,8 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-secondary)] bg-[var(--color-background)]/95 backdrop-blur">
-      <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="#etusivu" className="flex shrink-0 items-center">
+      <div className="mx-auto grid h-20 max-w-[1600px] grid-cols-[1fr_auto] items-center px-4 sm:px-6 lg:grid-cols-[1fr_auto_1fr] lg:px-8">
+        <Link href="#etusivu" className="flex shrink-0 items-center justify-self-start">
           <Image
             src="/assets/images/brand/logo.svg"
             alt="Tarkka Sähköpalvelu"
@@ -32,7 +32,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center justify-center gap-8 lg:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
@@ -44,7 +44,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center justify-self-end gap-4 lg:flex">
           <a
             href={CONTACT.phoneHref}
             className="flex items-center gap-2 text-sm font-semibold text-[var(--color-foreground)]"
@@ -63,7 +63,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setIsOpen((v) => !v)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-[var(--color-foreground)] lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center justify-self-end rounded-md text-[var(--color-foreground)] lg:hidden"
           aria-label={isOpen ? "Sulje valikko" : "Avaa valikko"}
         >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
